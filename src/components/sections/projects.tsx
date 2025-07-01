@@ -114,9 +114,9 @@ const Projects = () => {
   const ProjectCard = ({ project }: { project: (typeof projects)[0] }) => (
     <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 group">
       {/* 프로젝트 이미지 */}
-      <div className="relative overflow-hidden h-48 bg-gradient-to-br from-blue-100 to-purple-100">
+      <div className="relative overflow-hidden h-48 bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30">
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-4xl font-bold text-gray-400">
+          <div className="text-4xl font-bold text-gray-400 dark:text-gray-500">
             {project.title.charAt(0)}
           </div>
         </div>
@@ -128,16 +128,16 @@ const Projects = () => {
       </div>
 
       <CardHeader>
-        <CardTitle className="text-xl group-hover:text-blue-600 transition-colors">
+        <CardTitle className="text-xl group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
           {project.title}
         </CardTitle>
-        <p className="text-gray-600 text-sm">{project.description}</p>
+        <p className="text-muted-foreground text-sm">{project.description}</p>
       </CardHeader>
 
       <CardContent className="space-y-4">
         {/* 기술 스택 */}
         <div>
-          <h4 className="font-semibold text-sm text-gray-900 mb-2">
+          <h4 className="font-semibold text-sm text-foreground mb-2">
             기술 스택
           </h4>
           <div className="flex flex-wrap gap-1">
@@ -151,10 +151,10 @@ const Projects = () => {
 
         {/* 주요 기능 */}
         <div>
-          <h4 className="font-semibold text-sm text-gray-900 mb-2">
+          <h4 className="font-semibold text-sm text-foreground mb-2">
             주요 기능
           </h4>
-          <ul className="text-sm text-gray-600 space-y-1">
+          <ul className="text-sm text-muted-foreground space-y-1">
             {project.features.slice(0, 3).map((feature, index) => (
               <li key={index} className="flex items-center">
                 <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
@@ -162,7 +162,7 @@ const Projects = () => {
               </li>
             ))}
             {project.features.length > 3 && (
-              <li className="text-gray-400 text-xs">
+              <li className="text-muted-foreground/70 text-xs">
                 +{project.features.length - 3}개 더
               </li>
             )}
@@ -171,11 +171,11 @@ const Projects = () => {
 
         {/* 프로젝트 정보 */}
         <div className="grid grid-cols-2 gap-4 text-sm">
-          <div className="flex items-center text-gray-600">
+          <div className="flex items-center text-muted-foreground">
             <Calendar className="h-4 w-4 mr-2" />
             {project.duration}
           </div>
-          <div className="flex items-center text-gray-600">
+          <div className="flex items-center text-muted-foreground">
             <Users className="h-4 w-4 mr-2" />
             {project.teamSize}
           </div>
@@ -205,13 +205,13 @@ const Projects = () => {
   );
 
   return (
-    <section id="projects" className="py-20 bg-white">
+    <section id="projects" className="py-20 bg-background">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
             프로젝트
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             실무 역량을 키우고 기술을 적용해 본 다양한 프로젝트들입니다
           </p>
         </div>
@@ -224,42 +224,44 @@ const Projects = () => {
         </div>
 
         {/* 프로젝트 개발 접근법 */}
-        <div className="bg-gray-50 rounded-2xl p-8">
-          <h3 className="text-2xl font-bold text-gray-900 text-center mb-8">
+        <div className="bg-muted/50 rounded-2xl p-8">
+          <h3 className="text-2xl font-bold text-foreground text-center mb-8">
             프로젝트 개발 접근법
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div className="space-y-4">
-              <div className="mx-auto w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
-                <Users className="h-8 w-8 text-blue-600" />
+              <div className="mx-auto w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center">
+                <Users className="h-8 w-8 text-blue-600 dark:text-blue-400" />
               </div>
-              <h4 className="text-lg font-semibold text-gray-900">
+              <h4 className="text-lg font-semibold text-foreground">
                 사용자 중심
               </h4>
-              <p className="text-gray-600">
+              <p className="text-muted-foreground">
                 사용자의 니즈를 파악하고 직관적인 인터페이스 설계를 최우선으로
                 합니다
               </p>
             </div>
 
             <div className="space-y-4">
-              <div className="mx-auto w-16 h-16 bg-green-100 rounded-full flex items-center justify-center">
-                <Code className="h-8 w-8 text-green-600" />
+              <div className="mx-auto w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center">
+                <Code className="h-8 w-8 text-green-600 dark:text-green-400" />
               </div>
-              <h4 className="text-lg font-semibold text-gray-900">클린 코드</h4>
-              <p className="text-gray-600">
+              <h4 className="text-lg font-semibold text-foreground">
+                클린 코드
+              </h4>
+              <p className="text-muted-foreground">
                 유지보수가 쉽고 확장 가능한 깔끔한 코드 작성을 지향합니다
               </p>
             </div>
 
             <div className="space-y-4">
-              <div className="mx-auto w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center">
-                <ExternalLink className="h-8 w-8 text-purple-600" />
+              <div className="mx-auto w-16 h-16 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center">
+                <ExternalLink className="h-8 w-8 text-purple-600 dark:text-purple-400" />
               </div>
-              <h4 className="text-lg font-semibold text-gray-900">
+              <h4 className="text-lg font-semibold text-foreground">
                 성능 최적화
               </h4>
-              <p className="text-gray-600">
+              <p className="text-muted-foreground">
                 빠른 로딩 속도와 원활한 사용자 경험을 위한 최적화에 신경 씁니다
               </p>
             </div>
@@ -268,7 +270,9 @@ const Projects = () => {
 
         {/* GitHub 링크 */}
         <div className="text-center mt-12">
-          <p className="text-gray-600 mb-4">더 많은 프로젝트가 궁금하신가요?</p>
+          <p className="text-muted-foreground mb-4">
+            더 많은 프로젝트가 궁금하신가요?
+          </p>
           <Button variant="outline" size="lg" asChild>
             <a
               href="https://github.com"

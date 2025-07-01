@@ -14,7 +14,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-white"
+      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background to-muted/30"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="space-y-8">
@@ -25,14 +25,16 @@ const Hero = () => {
 
           {/* 메인 제목 */}
           <div className="space-y-4">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground">
               안녕하세요! 👋
               <br />
-              <span className="text-blue-600">프론트엔드 개발자</span>
+              <span className="text-blue-600 dark:text-blue-400">
+                프론트엔드 개발자
+              </span>
               <br />
               서경진입니다
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               React, TypeScript, Next.js를 활용하여 사용자 경험을 중시하는
               <br className="hidden sm:block" />웹 애플리케이션을 개발합니다
             </p>
@@ -80,10 +82,10 @@ const Hero = () => {
           {/* 간단한 소개 */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 text-left">
             <div className="space-y-2">
-              <h3 className="text-lg font-semibold text-gray-900">
+              <h3 className="text-lg font-semibold text-foreground">
                 💻 개발 분야
               </h3>
-              <p className="text-gray-600">
+              <p className="text-muted-foreground">
                 프론트엔드 웹 개발
                 <br />
                 반응형 웹 디자인
@@ -93,10 +95,10 @@ const Hero = () => {
             </div>
 
             <div className="space-y-2">
-              <h3 className="text-lg font-semibold text-gray-900">
+              <h3 className="text-lg font-semibold text-foreground">
                 🚀 주요 기술
               </h3>
-              <p className="text-gray-600">
+              <p className="text-muted-foreground">
                 React, Next.js
                 <br />
                 TypeScript, JavaScript
@@ -106,8 +108,8 @@ const Hero = () => {
             </div>
 
             <div className="space-y-2">
-              <h3 className="text-lg font-semibold text-gray-900">🎯 목표</h3>
-              <p className="text-gray-600">
+              <h3 className="text-lg font-semibold text-foreground">🎯 목표</h3>
+              <p className="text-muted-foreground">
                 사용자 중심 개발
                 <br />
                 지속적인 학습과 성장

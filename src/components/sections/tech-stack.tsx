@@ -84,27 +84,27 @@ const TechStack = () => {
   }) => (
     <div className="space-y-2">
       <div className="flex justify-between items-center">
-        <span className="font-medium text-gray-900">{skill.name}</span>
-        <span className="text-sm text-gray-500">{skill.level}%</span>
+        <span className="font-medium text-foreground">{skill.name}</span>
+        <span className="text-sm text-muted-foreground">{skill.level}%</span>
       </div>
-      <div className="w-full bg-gray-200 rounded-full h-2">
+      <div className="w-full bg-muted rounded-full h-2">
         <div
-          className="bg-blue-600 h-2 rounded-full transition-all duration-1000 ease-out"
+          className="bg-blue-600 dark:bg-blue-500 h-2 rounded-full transition-all duration-1000 ease-out"
           style={{ width: `${skill.level}%` }}
         />
       </div>
-      <p className="text-sm text-gray-600">{skill.description}</p>
+      <p className="text-sm text-muted-foreground">{skill.description}</p>
     </div>
   );
 
   return (
-    <section id="techstack" className="py-20 bg-gray-50">
+    <section id="techstack" className="py-20 bg-muted/30">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
             기술 스택
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             지속적인 학습과 실무 경험을 통해 습득한 기술들입니다
           </p>
         </div>
@@ -152,19 +152,19 @@ const TechStack = () => {
 
         {/* 학습 중인 기술들 */}
         <div className="mt-16">
-          <h3 className="text-2xl font-bold text-gray-900 text-center mb-8">
+          <h3 className="text-2xl font-bold text-foreground text-center mb-8">
             학습 중인 기술들
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <Card className="text-center hover:shadow-lg transition-shadow">
               <CardHeader>
-                <div className="mx-auto w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center">
-                  <Database className="h-6 w-6 text-yellow-600" />
+                <div className="mx-auto w-12 h-12 bg-yellow-100 dark:bg-yellow-900/30 rounded-full flex items-center justify-center">
+                  <Database className="h-6 w-6 text-yellow-600 dark:text-yellow-400" />
                 </div>
                 <CardTitle className="text-lg">Node.js</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-muted-foreground">
                   백엔드 개발 역량 확장을 위한 서버사이드 JavaScript 학습
                 </p>
               </CardContent>
@@ -172,13 +172,13 @@ const TechStack = () => {
 
             <Card className="text-center hover:shadow-lg transition-shadow">
               <CardHeader>
-                <div className="mx-auto w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-                  <Smartphone className="h-6 w-6 text-green-600" />
+                <div className="mx-auto w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center">
+                  <Smartphone className="h-6 w-6 text-green-600 dark:text-green-400" />
                 </div>
                 <CardTitle className="text-lg">React Native</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-muted-foreground">
                   모바일 앱 개발을 위한 크로스 플랫폼 프레임워크 학습
                 </p>
               </CardContent>
@@ -186,13 +186,13 @@ const TechStack = () => {
 
             <Card className="text-center hover:shadow-lg transition-shadow">
               <CardHeader>
-                <div className="mx-auto w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
-                  <Code className="h-6 w-6 text-purple-600" />
+                <div className="mx-auto w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center">
+                  <Code className="h-6 w-6 text-purple-600 dark:text-purple-400" />
                 </div>
                 <CardTitle className="text-lg">GraphQL</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-muted-foreground">
                   효율적인 데이터 페칭을 위한 쿼리 언어와 런타임 학습
                 </p>
               </CardContent>

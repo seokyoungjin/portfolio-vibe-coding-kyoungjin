@@ -19,8 +19,8 @@ const Contact = () => {
       description: "kyoungjin.dev@gmail.com",
       action: "메일 보내기",
       href: "mailto:kyoungjin.dev@gmail.com",
-      bgColor: "bg-blue-100",
-      iconColor: "text-blue-600",
+      bgColor: "bg-blue-100 dark:bg-blue-900/30",
+      iconColor: "text-blue-600 dark:text-blue-400",
     },
     {
       icon: <Github className="h-6 w-6" />,
@@ -28,8 +28,8 @@ const Contact = () => {
       description: "github.com/kyoungjin",
       action: "프로필 보기",
       href: "https://github.com",
-      bgColor: "bg-gray-100",
-      iconColor: "text-gray-600",
+      bgColor: "bg-gray-100 dark:bg-gray-800/50",
+      iconColor: "text-gray-600 dark:text-gray-400",
     },
     {
       icon: <Linkedin className="h-6 w-6" />,
@@ -37,8 +37,8 @@ const Contact = () => {
       description: "linkedin.com/in/kyoungjin",
       action: "연결하기",
       href: "https://linkedin.com",
-      bgColor: "bg-blue-100",
-      iconColor: "text-blue-600",
+      bgColor: "bg-blue-100 dark:bg-blue-900/30",
+      iconColor: "text-blue-600 dark:text-blue-400",
     },
     {
       icon: <MessageSquare className="h-6 w-6" />,
@@ -46,8 +46,8 @@ const Contact = () => {
       description: "tech.kyoungjin.blog",
       action: "글 읽기",
       href: "https://blog.example.com",
-      bgColor: "bg-green-100",
-      iconColor: "text-green-600",
+      bgColor: "bg-green-100 dark:bg-green-900/30",
+      iconColor: "text-green-600 dark:text-green-400",
     },
   ];
 
@@ -73,13 +73,13 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gray-50">
+    <section id="contact" className="py-20 bg-muted/30">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
             연락하기
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             새로운 기회나 협업 제안, 기술적인 대화 모두 환영합니다!
           </p>
         </div>
@@ -87,7 +87,9 @@ const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
           {/* 연락 방법들 */}
           <div className="lg:col-span-2">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">연락 방법</h3>
+            <h3 className="text-2xl font-bold text-foreground mb-6">
+              연락 방법
+            </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {contactMethods.map((method, index) => (
                 <Card
@@ -105,7 +107,7 @@ const Contact = () => {
                         <CardTitle className="text-lg">
                           {method.title}
                         </CardTitle>
-                        <p className="text-sm text-gray-600">
+                        <p className="text-sm text-muted-foreground">
                           {method.description}
                         </p>
                       </div>
@@ -134,7 +136,9 @@ const Contact = () => {
 
           {/* 퀵 링크 */}
           <div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">빠른 링크</h3>
+            <h3 className="text-2xl font-bold text-foreground mb-6">
+              빠른 링크
+            </h3>
             <div className="space-y-4">
               {quickLinks.map((link, index) => (
                 <Card key={index} className="hover:shadow-md transition-shadow">
@@ -145,14 +149,14 @@ const Contact = () => {
                       rel="noopener noreferrer"
                       className="flex items-center space-x-3 group"
                     >
-                      <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                      <div className="w-10 h-10 bg-muted/50 rounded-lg flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                         {link.icon}
                       </div>
                       <div className="flex-1">
-                        <h4 className="font-semibold text-gray-900 group-hover:text-primary transition-colors">
+                        <h4 className="font-semibold text-foreground group-hover:text-primary transition-colors">
                           {link.title}
                         </h4>
-                        <p className="text-sm text-gray-600">
+                        <p className="text-sm text-muted-foreground">
                           {link.description}
                         </p>
                       </div>
@@ -176,18 +180,20 @@ const Contact = () => {
             </CardHeader>
             <CardContent className="space-y-4">
               <div>
-                <h4 className="font-semibold text-gray-900">현재 위치</h4>
-                <p className="text-gray-600">서울, 대한민국</p>
+                <h4 className="font-semibold text-foreground">현재 위치</h4>
+                <p className="text-muted-foreground">서울, 대한민국</p>
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900">선호 근무 방식</h4>
-                <p className="text-gray-600">
+                <h4 className="font-semibold text-foreground">
+                  선호 근무 방식
+                </h4>
+                <p className="text-muted-foreground">
                   하이브리드 / 리모트 / 오프라인 모두 가능
                 </p>
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900">시간대</h4>
-                <p className="text-gray-600">KST (UTC+9)</p>
+                <h4 className="font-semibold text-foreground">시간대</h4>
+                <p className="text-muted-foreground">KST (UTC+9)</p>
               </div>
             </CardContent>
           </Card>
@@ -201,7 +207,7 @@ const Contact = () => {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <ul className="space-y-2 text-gray-600">
+              <ul className="space-y-2 text-muted-foreground">
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
                   프론트엔드 개발 및 최신 기술 트렌드
@@ -228,11 +234,11 @@ const Contact = () => {
         </div>
 
         {/* CTA 섹션 */}
-        <div className="text-center bg-white rounded-2xl p-8">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">
+        <div className="text-center bg-card rounded-2xl p-8">
+          <h3 className="text-2xl font-bold text-foreground mb-4">
             함께 일하고 싶으신가요?
           </h3>
-          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+          <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
             새로운 프로젝트, 협업 기회, 또는 단순히 기술에 대한 이야기를 나누고
             싶으시다면 언제든지 연락주세요. 빠른 시일 내에 답변드리겠습니다!
           </p>

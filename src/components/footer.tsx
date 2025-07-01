@@ -50,13 +50,15 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-gray-900 dark:bg-background border-t">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* 로고 및 소개 */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold">서경진</h3>
-            <p className="text-gray-300 leading-relaxed">
+            <h3 className="text-2xl font-bold text-white dark:text-foreground">
+              서경진
+            </h3>
+            <p className="text-gray-300 dark:text-muted-foreground leading-relaxed">
               사용자 경험을 중시하는 프론트엔드 개발자입니다. React와
               TypeScript를 활용하여 의미 있는 웹 애플리케이션을 만들어갑니다.
             </p>
@@ -66,7 +68,7 @@ const Footer = () => {
                   key={link.name}
                   variant="ghost"
                   size="sm"
-                  className="text-gray-300 hover:text-white hover:bg-gray-800"
+                  className="text-gray-300 hover:text-white hover:bg-gray-800 dark:text-muted-foreground dark:hover:text-foreground dark:hover:bg-muted"
                   asChild
                 >
                   <a
@@ -84,13 +86,15 @@ const Footer = () => {
 
           {/* 빠른 링크 */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold">빠른 링크</h4>
+            <h4 className="text-lg font-semibold text-white dark:text-foreground">
+              빠른 링크
+            </h4>
             <nav className="space-y-2">
               {quickLinks.map((link) => (
                 <button
                   key={link.name}
                   onClick={() => scrollToSection(link.href)}
-                  className="block text-gray-300 hover:text-white transition-colors text-left"
+                  className="block text-gray-300 hover:text-white dark:text-muted-foreground dark:hover:text-foreground transition-colors text-left"
                 >
                   {link.name}
                 </button>
@@ -100,8 +104,10 @@ const Footer = () => {
 
           {/* 연락처 정보 */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold">연락처</h4>
-            <div className="space-y-2 text-gray-300">
+            <h4 className="text-lg font-semibold text-white dark:text-foreground">
+              연락처
+            </h4>
+            <div className="space-y-2 text-gray-300 dark:text-muted-foreground">
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4" />
                 <span>kyoungjin.dev@gmail.com</span>
